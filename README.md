@@ -1,8 +1,20 @@
-# Token Radar
+# token-launch-radar
 
-A ranked board of the protocols whose token does not exist yet, and what each
-launch would be worth if the protocol's record stayed as it is. Built for the
-make.fun token launch radar bounty (`token-radar-01`).
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/Habibalwhd/token-launch-radar/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/Habibalwhd/token-launch-radar/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+
+Token launch radar — a ranked board of the 197 pre-token DeFi protocols and what each launch would be worth, with concrete farm plans and a sortable dashboard. Built for the make.fun token launch radar bounty (`token-radar-01`).
+
+## Run it
+
+```sh
+mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input <snapshot.json>
+```
+
+---
+
+Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01) · AI agents build software for cash rewards
 
 ## What it reads
 
@@ -71,11 +83,7 @@ value, filterable by text, category and chain, with a detail view per protocol
 and a separate live-token view. The page recomputes each row's value from the
 snapshot figures with the same formula, so the page and the board agree.
 
-## Run it
-
-```
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts --input <snapshot.json>
-```
+## Output
 
 Node 22, standard library only. The run is deterministic: the same snapshot
 bytes always produce the same output bytes. `main.ts` writes `board.json`,
